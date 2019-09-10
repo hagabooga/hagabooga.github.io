@@ -1,88 +1,107 @@
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style> 
-@font-face {
-   font-family: myFirstFont;
-   src: url(segoeuil.ttf);
-}
-* { font-family: myFirstFont; }
-a1 { font-size: 48; }
-play { font-size: 32;}
-</style>
-<style>
-.collapsible {
-  align-items: center;
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 75%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      @font-face {
+        font-family: myFirstFont;
+        src: url(segoeuil.ttf);
+      }
+      * {
+        font-family: myFirstFont;
+      }
+      a1 {
+        font-size: 48;
+      }
+      play {
+        font-size: 24;
+      }
+    </style>
+    <style>
+      .collapsible {
+        background: none;
+        color: black;
+        cursor: pointer;
+        padding: 18px;
+        /* width: 75%; */
+        text-align: left;
+        border: none;
+        outline: none;
+        font-size: 30px;
+        /* position: relative; */
+        margin: 0 auto;
+      }
 
-.active, .collapsible:hover {
-  background-color: #555;
-}
+      .active,
+      .collapsible:hover {
+        background-color: lightgrey;
+      }
 
-.collapsible:after {
-  
-  content: '\02C3';
-  color: white;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
+      .collapsible:after {
+        content: "\02C3";
+        font-weight: bold;
+        margin-left: 30px;
+      }
 
-.active:after {
-  content: "\02C5";
-}
+      .active:after {
+        content: "\02C5";
+      }
 
-.content {
-  width: 75%;
-  padding: 0 0px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
-}
-</style>
-</head>
+      .content {
+        text-align: left;
+        padding: 0 0 0 0px;
+        margin: 0 0 0 0px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+      }
+      .header {
+        font-size: 48;
+        text-align: center;
+      }
+    </style>
+  </head>
 
+  <body onresize="on_resize()">
+    <div style="text-align: center;">
+      <div style="display: inline-block; text-align: left;">
+        <div class="header">Cameron Hu<br /></div>
 
-<body>
-<center><a1>Cameron Hu</a1><br></center>
-         
-<button class="collapsible">Booga's Welcome of Fate</button>
-<div class="content">
-   <play>
-      <a href="welcome/fate.html">Play Booga's Welcome of Fate</a><br><br>
-      <u><b>Instructions</b></u><br>
-      Left click: Use item<br>
-      Right click: Interact<br>
-      I - Inventory
-   </play>
-</div>
-<button class="collapsible">Open Section 2</button>
-<div class="content">
-   Test
-</div>
-<button class="collapsible">Open Section 3</button>
-<div class="content">
-   Leggo
-</div>
+        <button class="collapsible">About Me</button>
+        <div class="content">
+          <play>
+            <p class="collapse_p">
+              I am an undergraduate completing SFU's dual degree program<br />
+              in computing science.
+            </p>
+          </play>
+        </div>
 
-
-
-
-
-
-
-
-
-<script src="collapse.js"></script>
-</body>
+        <button class="collapsible">Booga's Welcome of Fate</button>
+        <div class="content">
+          <play>
+            <p>
+              <a href="welcome/fate.html">Play Booga's Welcome of Fate</a
+              ><br /><br />
+              <u><b>Instructions</b></u
+              ><br />
+              Left click: Use item<br />
+              Right click: Interact<br />
+              I - Inventory
+            </p>
+          </play>
+        </div>
+        <script src="collapse.js"></script>
+        <script>
+          function on_resize() {
+            for (var x of document.getElementsByClassName("collapsible")) {
+              if (x.classList.contains("active")) {
+                var content = x.nextElementSibling;
+                content.style.maxHeight = content.scrollHeight + "px";
+              }
+            }
+          }
+        </script>
+      </div>
+    </div>
+  </body>
 </html>
