@@ -9,12 +9,6 @@
       * {
         font-family: myFirstFont;
       }
-      a1 {
-        font-size: 48;
-      }
-      play {
-        font-size: 24;
-      }
     </style>
     <style>
       .collapsible {
@@ -22,13 +16,11 @@
         color: black;
         cursor: pointer;
         padding: 18px;
-        /* width: 75%; */
         text-align: left;
         width: 100%;
         border: none;
         outline: none;
         font-size: 30px;
-        /* position: relative; */
         margin: 0 auto;
       }
 
@@ -49,15 +41,15 @@
       }
 
       .content {
+        font-size: 24px;
         text-align: left;
-        padding: 0 0 0 0px;
-        margin: 0 0 0 0px;
+        padding: 0px 18px;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.2s ease-out;
       }
       .header {
-        font-size: 48;
+        font-size: 48px; 
         text-align: center;
       }
     </style>
@@ -67,29 +59,24 @@
     <div style="text-align: center;">
       <div style="display: inline-block; text-align: left;">
         <div class="header">Cameron Hu<br /></div>
-
         <button class="collapsible">About Me</button>
         <div class="content">
-          <play>
-            <p class="collapse_p">
+            <p>
               I am an undergraduate completing SFU's dual degree program<br />
               in computing science.
             </p>
-          </play>
         </div>
 
         <button class="collapsible">Booga's Welcome of Fate</button>
         <div class="content">
-          <play>
             <p>
-              <a href="welcome/fate.html">Play Booga's Welcome of Fate</a
-              ><br /><br />
+              <a href="welcome/fate.html">Play Booga's Welcome of Fate</a>
+              <br /><br />
               <u><b>Instructions</b></u
               ><br />
               Left click: Use item<br />
               Right click: Interact<br />
               I - Inventory
-            </p>
           </play>
         </div>
         <script src="collapse.js"></script>
