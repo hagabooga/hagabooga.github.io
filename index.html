@@ -15,7 +15,7 @@
         background: none;
         color: black;
         cursor: pointer;
-        padding: 18px;
+        padding: 10px;
         text-align: left;
         width: 100%;
         border: none;
@@ -32,7 +32,7 @@
       .collapsible:after {
         content: "\02C3";
         font-weight: bold;
-        margin-left: 30px;
+        /* margin-left: 30px; */
         float: right;
       }
 
@@ -46,10 +46,11 @@
         padding: 0px 18px;
         max-height: 0;
         overflow: hidden;
+        max-width: 600px;
         transition: max-height 0.2s ease-out;
       }
       .header {
-        font-size: 48px; 
+        font-size: 48px;
         text-align: center;
       }
     </style>
@@ -61,27 +62,30 @@
         <div class="header">Cameron Hu<br /></div>
         <button class="collapsible">About Me</button>
         <div class="content">
-            <p>
-              I am an undergraduate completing SFU's dual degree program<br />
-              in computing science.
-            </p>
+          <p>
+            I am an undergraduate completing SFU's dual degree program in
+            computing science. I like to code and play video games.
+          </p>
         </div>
 
         <button class="collapsible">Projects</button>
         <div class="content">
           <h3>Booga's Welcome of Fate</h3>
-            <p>My main personal project. I have created multiple versions of this game <br>
-              using PyGame, Unity and Godot. My final and current <br>
-              version of the game is made using Godot.
-              <a href="welcome/fate.html">Play Booga's Welcome of Fate</a>
-              <br /><br />
-              <u><b>Instructions</b></u
-              ><br />
-              Left click: Use item<br />
-              Right click: Interact<br />
-              I - Inventory
-          </play>
+          <p>
+            My main personal project. I have created multiple versions of this
+            game using PyGame, Unity and Godot. My final and current version of
+            the game is made using Godot. You can play the Godot version of the
+            game using the link below.<br /> <br />
+            <a href="welcome/fate.html">Play Booga's Welcome of Fate</a>
+            <br /><br />
+            <u><b>Instructions</b></u
+            ><br />
+            Left click: Use item<br />
+            Right click: Interact<br />
+            I - Inventory
+          </p>
         </div>
+
         <script src="collapse.js"></script>
         <script>
           function on_resize() {
