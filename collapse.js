@@ -13,6 +13,6 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-window.onload = function() {
+window.onload = function() { 
   document.getElementById("checkers_demo").controls = true;
 }
