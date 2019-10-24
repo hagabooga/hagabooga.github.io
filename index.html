@@ -20,8 +20,9 @@
         width: 100%;
         border: none;
         outline: none;
-        font-size: 30px;
+        font-size: 24px;
         margin: 0 auto;
+        font-weight: bold;
       }
 
       .active,
@@ -41,7 +42,7 @@
 
       .content {
         background-color: none;
-        font-size: 24px;
+        font-size: 20px;
         text-align: left;
         padding: 0px 18px;
         max-height: 0;
@@ -49,20 +50,33 @@
         max-width: 600px;
         transition: max-height 0.2s ease-out;
       }
-      .item1 {grid-area: name;
-        font-size: 48px;
+      .item1 {
+        grid-area: name;
+        font-size: 56px;
         text-align: left;
       }
-      .item2 {grid-area: github; text-align: left;}
-      .item3 {grid-area: phone; text-align: left;}
-      .item4 {grid-area: email; text-align: left;}
-      .item5 {grid-area: linkedn; text-align: left;}
+      .item2 {
+        grid-area: github;
+        text-align: left;
+      }
+      .item3 {
+        grid-area: phone;
+        text-align: left;
+      }
+      .item4 {
+        grid-area: email;
+        text-align: left;
+      }
+      .item5 {
+        grid-area: linkedn;
+        text-align: left;
+      }
       .grid-container {
         /* justify-content: center; */
         display: grid;
         grid-template-areas:
-          'phone name github'
-          'email name linkedn';
+          "phone name github"
+          "email name linkedn";
       }
       .grid-container > div {
         text-align: center;
@@ -71,49 +85,115 @@
   </head>
 
   <body onresize="on_resize()">
-    
     <div style="text-align: center;">
-      
       <div style="display: inline-block; text-align: left;">
         <div class="grid-container">
           <div class="item1">Cameron Hu</div>
-          <div class="item2"><img src="github-icon.png"  width="20" height="20" hspace="7" align="center"><a style="font-size: 20" href="https://github.com/hagabooga"target="_blank">hagabooga</a></div>
-          <div class="item3"><img src="phone-icon.png"  width="20" height="20" hspace="7" align="center"><a style="font-size: 20" href="tel:+7788557829">7788557829</a></div>
-          <div class="item4"><img src="email-icon.png"  width="20" height="20" hspace="7" align="center"><a style="font-size: 20" href="mailto:ckhu@sfu.ca">ckhu@sfu.ca</a></div>
-          <div class="item5"><img src="linkedin-icon.png"  width="20" height="20" hspace="7" align="center"><a style="font-size: 20" href="https://www.linkedin.com/in/cameron-hu-253944171/"target="_blank">Cameron Hu</a></div>
+          <div class="item2">
+            <img
+              src="github-icon.png"
+              width="20"
+              height="20"
+              hspace="7"
+              align="center"
+            /><a
+              style="font-size: 20"
+              href="https://github.com/hagabooga"
+              target="_blank"
+              >hagabooga</a
+            >
+          </div>
+          <div class="item3">
+            <img
+              src="phone-icon.png"
+              width="20"
+              height="20"
+              hspace="7"
+              align="center"
+            /><a style="font-size: 20" href="tel:+7788557829">7788557829</a>
+          </div>
+          <div class="item4">
+            <img
+              src="email-icon.png"
+              width="20"
+              height="20"
+              hspace="7"
+              align="center"
+            /><a style="font-size: 20" href="mailto:ckhu@sfu.ca">ckhu@sfu.ca</a>
+          </div>
+          <div class="item5">
+            <img
+              src="linkedin-icon.png"
+              width="20"
+              height="20"
+              hspace="7"
+              align="center"
+            /><a
+              style="font-size: 20"
+              href="https://www.linkedin.com/in/cameron-hu-253944171/"
+              target="_blank"
+              >Cameron Hu</a
+            >
+          </div>
         </div>
-        <div style="font-size: 12; text-align: center;">(website under construction)<br /></div>
-        
-        <button class="collapsible">About Me</button>
+        <div style="font-size: 12; text-align: center;">
+          (website under construction)<br />
+        </div>
+
+        <button class="collapsible">• About Me</button>
         <div class="content">
           <p>
             I am an undergraduate completing SFU's dual degree program in
             computing science. I like to code and play video games.
           </p>
         </div>
-
-        <button class="collapsible">Projects</button>
+        <button class="collapsible">• Skills</button>
         <div class="content">
-          <h3>Booga's Welcome of Fate</h3>
+          <p>
+            <b>Programming Languages</b><br>• C, C++, C#, Python, Java, JavaScript, Scheme, Haskell, Prolog, Go, Racket, Assembly
+          </p>
+        </div>
+        <div><p><font size="6"><u>Projects</u></font></p></div>
+        <button class="collapsible">• Booga's Welcome of Fate</button>
+        <div class="content">
           <p>
             My main personal project. I have created multiple versions of this
             game using PyGame, Unity and Godot. My final and current version of
             the game is made using Godot. You can play the Godot version of the
-            game using the link below.<br>
+            game using the link below.<br /><br />
             If the game does not appear after loading, try refreshing the page.
-            <br /> <br />
+            <br />
+            <br />
             <a href="welcome/fate.html">Play Booga's Welcome of Fate</a>
             <br /><br />
-            <u><b>Instructions</b></u><br />
+            <u><b>Instructions</b></u>
+            <br />
             Left click: Use item<br />
             Right click: Interact<br />
             I: Inventory
           </p>
         </div>
-
+        <button class="collapsible">• Booga's Clubhouse</button>
+        <div class="content">
+          <p>
+            Another game project I am working on. I work on this project to
+            train my 3D game development skills and practice multiplayer
+            networking with Godot's high-level multiplayer API. The goal is to
+            create 3D multiplayer board games and card games to play online with
+            friends.<br /><br />
+            A board game in development is Checkers. A video of the game
+            showcasing multiplayer functionality is shown below.
+            <br />
+            <br />
+            <video width="600">
+              <source src="resources/checkers_demo.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
+          </p>
+        </div>
+      </div>
         <script src="collapse.js"></script>
-        <script>
-          function on_resize() {
+        <script>function on_resize() {
             for (var x of document.getElementsByClassName("collapsible")) {
               if (x.classList.contains("active")) {
                 var content = x.nextElementSibling;
@@ -121,9 +201,8 @@
               }
             }
           }
-        </script>
-      </div>
-    </div>
-
+          </script>
+    
+  </div>
   </body>
 </html>
