@@ -1,4 +1,5 @@
 <html>
+    
   <head>
     <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
     <link rel='icon' type='image/x-icon' href='favicon.ico' />
@@ -54,7 +55,7 @@
       }
       .item1 {
         grid-area: name;
-        font-size: 56px;
+        font-size: 64px;
         text-align: left;
       }
       .item2 {
@@ -73,14 +74,22 @@
         grid-area: linkedn;
         text-align: left;
       }
-      .grid-container {
+      .grid-container.name {
         /* justify-content: center; */
         display: grid;
         grid-template-areas:
-          "phone name github"
-          "email name linkedn";
+          "name icon";
       }
-      .grid-container > div {
+      .grid-container.name > div {
+        text-align: center;
+      }
+      .grid-container.links {
+        /* justify-content: center; */
+        display: grid;
+        grid-template-areas:
+          "phone email github linkedn";
+      }
+      .grid-container.links > div {
         text-align: center;
       }
     </style>
@@ -89,8 +98,12 @@
   <body onresize="on_resize()">
     <div style="text-align: center;">
       <div style="display: inline-block; text-align: left;">
-        <div class="grid-container">
-          <div class="item1">Cameron Hu</div>
+          <div class="grid-container name">
+            <div class="item1">Cameron Hu</div>
+            <div><img src="favicon.ico"/></div>
+          </div>
+        <div class="grid-container links">
+            
           <div class="item2">
             <img
               src="github-icon.png"
@@ -138,8 +151,8 @@
             >
           </div>
         </div>
+        
         <div style="font-size: 12; text-align: center;">
-          (website under construction)<br />
         </div>
 
         <button class="collapsible">• About Me</button>
