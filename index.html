@@ -14,6 +14,10 @@
       }
     </style>
     <style>
+      .wrapper {
+        display: inline-block;
+        text-align: left;
+      }
       .collapsible {
         background: none;
         color: black;
@@ -103,12 +107,34 @@
       .grid-container.links > div {
         text-align: center;
       }
+      /* CSS for smaller viewports */
+      @media (max-width: 640px) {
+        .wrapper {
+          display: block;
+        }
+        .item4 {
+          justify-self: end;
+        }
+        .item5 {
+          justify-self: end;
+        }
+        .grid-container.name {
+          grid-template-areas:
+            "name"
+            "icon";
+        }
+        .grid-container.links {
+          grid-template-areas:
+            "phone email"
+            "github linkedn";
+        }
+      }
     </style>
   </head>
 
   <body onresize="on_resize()">
     <div style="text-align: center;">
-      <div style="display: inline-block; text-align: left;">
+      <div class="wrapper">
           <div class="grid-container name">
             <div class="item1">Cameron Hu</div>
             <div><img src="favicon.ico"/></div>
