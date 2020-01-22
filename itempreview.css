@@ -37,3 +37,9 @@
   /* width: 20%; */
   height: auto;
 }
+
+@media (max-width: 1000px) {
+  .itempreview-container {
+    width: 100%;
+  }
+}
