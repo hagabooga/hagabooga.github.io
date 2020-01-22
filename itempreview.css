@@ -1,8 +1,9 @@
-.grid-container {
+.itempreview-container {
   display: inline-grid;
-  grid-template-columns: auto auto auto;
-  grid-row-gap: 10px;
-  grid-column-gap: 10px;
+  grid-template-columns: auto auto;
+  grid-gap: 1ch;
+  width: 80%;
+  height: auto;
   margin: auto;
 }
 
@@ -14,19 +15,25 @@
   height: auto;
   justify-content: center;
   align-items: center;
-  max-width: 500px;
 }
 .zoom:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 .previewtext {
   position: absolute;
-  font-size: 40px;
+  font-size: 32px;
   color: white;
 }
 
 .previewimage {
-  max-width: 500px;
   border-radius: 4%;
+  max-width: 100%;
+  max-height: auto;
+  height: auto;
+}
+
+.scale {
+  /* width: 20%; */
+  height: auto;
 }
