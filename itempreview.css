@@ -37,9 +37,10 @@
   height: auto;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 850px) {
   .itempreview-container {
     grid-gap: 1%;
+    grid-template-columns: auto;
     width: 100%;
   }
 }
