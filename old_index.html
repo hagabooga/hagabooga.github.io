@@ -1,0 +1,247 @@
+<html>
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body onresize="on_resize()">
+    <div style="text-align: center;">
+      div class="wrapper">
+      <div class="grid-container name">
+        <div class="item1">Cameron Hu</div>
+        <div><img src="favicon.ico" /></div>
+      </div>
+      <div class="grid-container links">
+        <div class="item2">
+          <img
+            src="github-icon.png"
+            width="20"
+            height="20"
+            hspace="7"
+            align="center"
+          />
+          <span class="item-link">
+            <a
+              style="font-size: 20"
+              href="https://github.com/hagabooga"
+              target="_blank"
+            >
+              hagabooga
+            </a>
+          </span>
+        </div>
+        <div class="item3">
+          <img
+            src="phone-icon.png"
+            width="20"
+            height="20"
+            hspace="7"
+            align="center"
+          />
+          <span class="item-link">
+            <a style="font-size: 20" href="tel:+7788557829">7788557829</a>
+          </span>
+        </div>
+        <div class="item4">
+          <img
+            src="email-icon.png"
+            width="20"
+            height="20"
+            hspace="7"
+            align="center"
+          />
+          <span class="item-link">
+            <a style="font-size: 20" href="mailto:ckhu@sfu.ca">ckhu@sfu.ca</a>
+          </span>
+        </div>
+        <div class="item5">
+          <img
+            src="linkedin-icon.png"
+            width="20"
+            height="20"
+            hspace="7"
+            align="center"
+          />
+          <span class="item-link">
+            <a
+              style="font-size: 20"
+              href="https://www.linkedin.com/in/cameron-hu-253944171/"
+              target="_blank"
+            >
+              Cameron Hu
+            </a>
+          </span>
+        </div>
+      </div>
+
+      <div style="font-size: 12; text-align: center;"></div>
+
+      <button class="collapsible">• About Me</button>
+      <div class="content">
+        <p>
+          I am an undergraduate completing SFU's SFU-ZJU Computing Science Dual
+          Degree Program. During my free time I like to code and play video
+          games.
+        </p>
+      </div>
+      <!-- <button class="collapsible">• Skills</button>
+        <div class="content">
+          <p>
+            <b>Programming Languages</b><br><li>C, C++, C#, Python, Java, JavaScript, Scheme, Haskell, Prolog, Go, Racket, Assembly</li><br>
+            <b>Software</b><br><li>Unity, Godot, Git, PostgreSQL, R, MATLAB</li><br>
+            <b>Web Development</b><br><li>WebGL, HTML, CSS</li>
+          </p>
+        </div> -->
+      <div>
+        <p>
+          <font size="6"><u>Projects</u></font>
+        </p>
+      </div>
+      <button class="collapsible">• Booga's Welcome of Fate</button>
+      <div class="content">
+        <p>
+          My main personal project. In this RPG style game, you can farm, fight
+          monsters, level up, and rank up skills according to your personal
+          preference. I have created multiple versions of this game using
+          PyGame, Unity and Godot. My final and current version of the game is
+          made using Godot. <br /><br />
+
+          Check out the latest alpha demo releases below:<br />
+          <a
+            href="https://github.com/hagabooga/welcome-of-fate-godot/releases"
+            target="_blank"
+            >Welcome of Fate Releases</a
+          >
+          <br /><br /><br />
+
+          Below, you can play the HTML5 version of the game <br />
+          If the game does not appear after loading, try refreshing the page.
+          <br />
+          <br />
+          <a href="welcome/fate.html" target="_blank"
+            >Play Booga's Welcome of Fate</a
+          >
+          <br /><br />
+          <u><b>Instructions</b></u>
+          <br />
+          Left Mouse Button: Use Item <br />
+          Right Mouse Button: Interact With the World<br />
+          Q: Toggle Quests Panel<br />
+          E: Toggle Inventory Panel<br />
+          R: Toggle Stats Panel<br />
+          T: Toggle Options Panel<br />
+          Esc: Close all Panels<br />
+          <br />
+        </p>
+      </div>
+      <button class="collapsible">• Booga's Clubhouse</button>
+      <div class="content">
+        <p>
+          Another game project I am working on. I work on this project to train
+          my 3D game development skills and practice multiplayer networking with
+          Godot's high-level multiplayer API. The goal is to create 3D
+          multiplayer board games and card games to play online with friends.<br /><br />
+          A board game in development is Checkers. A video of the game
+          showcasing multiplayer functionality is shown below.
+          <center>
+            <video
+              id="checkers_demo"
+              width="600"
+              height="315"
+              poster="resources/checkers_demo_thumb.png"
+              preload="none"
+              onplay="on_resize()"
+            >
+              <source src="resources/checkers_demo.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
+          </center>
+        </p>
+      </div>
+      <button class="collapsible">• Charging Up!</button>
+      <div class="content">
+        <p>
+          A game created at the BC Game Jam 2019 Hackathon. Created with 4
+          friends, we created a multiplayer/coop game that includes 4 minigames.
+          A video showcase for the game is given below.<br />
+          <center>
+            <iframe
+              width="420"
+              height="315"
+              src="https://www.youtube.com/embed/wghuUpWEi4A"
+            ></iframe>
+          </center>
+          <br /><br />
+          Feel free to try the game below but the game is best played with 2
+          people. If the game does not appear after loading, try refreshing the
+          page.
+          <br />
+          <br />
+          <a href="charging/BCGameJam2019-wario.html" target="_blank"
+            >Play Charging Up!</a
+          >
+          <br /><br />
+          <u><b>Instructions</b></u>
+          <br />
+          Player 1: WASD<br />
+          Player 2: Arrow keys<br />
+        </p>
+      </div>
+
+      <button class="collapsible">• Robot Arm</button>
+      <div class="content">
+        <p>
+          In this project I used WebGL to create a robot arm. The robot arm can
+          be controlled using interactive sliders. I also used inverse
+          kinematics to make the robot arm touch a point on the screen where the
+          user clicked. I also animated a simple animation where the robot arm
+          picks up a rock on the table, swings it around then drops the rock.
+          <br />
+
+          <center>
+            <a href="resources/robot_arm/index.html" target="_blank"
+              >Try my robot arm project</a
+            ><br />
+            <img src="resources/robot_arm_thumb.png" width="300" />
+          </center>
+        </p>
+      </div>
+      <center>
+        <a
+          href="resources/robot_arm/index.html"
+          onmouseover="change_col(this, 'lightblue')"
+          onmouseout="change_col(this, 'blue')"
+        >
+          <div class="zoom">
+            <img class="previewimage" src="preview_fate.png" />
+            <div class="previewtext">Booga's Welcome of Fate</div>
+          </div>
+        </a>
+      </center>
+      <div>
+        <a href="resources/resume.pdf" target="_blank">My Resume</a>
+      </div>
+
+      <div>
+        <script src="collapse.js"></script>
+        <script>
+          function change_col(x, color) {
+            let text = x.getElementsByClassName("previewtext")[0];
+            text.style.color = color;
+          }
+
+          function on_resize() {
+            for (var x of document.getElementsByClassName("collapsible")) {
+              if (x.classList.contains("active")) {
+                var content = x.nextElementSibling;
+                content.style.maxHeight = content.scrollHeight + "px";
+              }
+            }
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
