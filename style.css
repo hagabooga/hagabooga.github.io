@@ -1,0 +1,148 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(segoeuil.ttf);
+}
+* {
+  font-family: myFirstFont;
+}
+
+.wrapper {
+  display: inline-block;
+  text-align: left;
+}
+.collapsible {
+  background: none;
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  text-align: left;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.active,
+.collapsible:hover {
+  background-color: lightgrey;
+}
+
+.collapsible:after {
+  content: "\02C3";
+  font-weight: bold;
+  float: right;
+}
+
+.active:after {
+  content: "\02C5";
+}
+
+.content {
+  background-color: none;
+  font-size: 20px;
+  text-align: left;
+  padding: 0px 18px;
+  max-height: 0;
+  overflow: hidden;
+  max-width: 600px;
+  transition: max-height 0.2s ease-out;
+}
+.item1 {
+  grid-area: name;
+  font-size: 64px;
+  text-align: left;
+}
+.item2 {
+  display: flex;
+  align-items: center;
+  grid-area: github;
+  text-align: left;
+}
+.item3 {
+  display: flex;
+  align-items: center;
+  grid-area: phone;
+  text-align: left;
+}
+.item4 {
+  display: flex;
+  align-items: center;
+  grid-area: email;
+  text-align: left;
+}
+.item5 {
+  display: flex;
+  align-items: center;
+  grid-area: linkedn;
+  text-align: left;
+}
+.item-link {
+  margin-bottom: 5px;
+}
+.grid-container.name {
+  /* justify-content: center; */
+  display: grid;
+  grid-template-areas: "name icon";
+}
+.grid-container.name > div {
+  text-align: center;
+}
+.grid-container.links {
+  /* justify-content: center; */
+  display: grid;
+  grid-template-areas: "phone email github linkedn";
+}
+.grid-container.links > div {
+  text-align: center;
+}
+/* CSS for smaller viewports */
+@media (max-width: 640px) {
+  .wrapper {
+    display: block;
+  }
+  .item4 {
+    justify-self: end;
+  }
+  .item5 {
+    justify-self: end;
+  }
+  .grid-container.name {
+    grid-template-areas:
+      "name"
+      "icon";
+  }
+  .grid-container.links {
+    grid-template-areas:
+      "phone email"
+      "github linkedn";
+  }
+}
+
+.previewimage {
+  max-width: 600px;
+}
+
+.zoom {
+  transition: transform 0.2s; /* Animation */
+  text-align: center;
+  display: flex;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+}
+.zoom:hover {
+  transform: scale(
+    1.2
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.previewtext {
+  /* flex 0 0 120px;: */
+  position: absolute;
+  font-size: 32px;
+  color: blue;
+}

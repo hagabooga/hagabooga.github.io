@@ -1,135 +1,9 @@
 <html>
-
   <head>
     <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
     <link rel='icon' type='image/x-icon' href='favicon.ico' />
+    <link rel="stylesheet" href ="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      @font-face {
-        font-family: myFirstFont;
-        src: url(segoeuil.ttf);
-      }
-      * {
-        font-family: myFirstFont;
-      }
-    </style>
-    <style>
-      .wrapper {
-        display: inline-block;
-        text-align: left;
-      }
-      .collapsible {
-        background: none;
-        color: black;
-        cursor: pointer;
-        padding: 10px;
-        text-align: left;
-        width: 100%;
-        border: none;
-        outline: none;
-        font-size: 24px;
-        margin: 0 auto;
-        font-weight: bold;
-      }
-
-      .active,
-      .collapsible:hover {
-        background-color: lightgrey;
-      }
-
-      .collapsible:after {
-        content: "\02C3";
-        font-weight: bold;
-        float: right;
-      }
-
-      .active:after {
-        content: "\02C5";
-      }
-
-      .content {
-        background-color: none;
-        font-size: 20px;
-        text-align: left;
-        padding: 0px 18px;
-        max-height: 0;
-        overflow: hidden;
-        max-width: 600px;
-        transition: max-height 0.2s ease-out;
-      }
-      .item1 {
-        grid-area: name;
-        font-size: 64px;
-        text-align: left;
-      }
-      .item2 {
-        display: flex;
-        align-items: center;
-        grid-area: github;
-        text-align: left;
-      }
-      .item3 {
-        display: flex;
-        align-items: center;
-        grid-area: phone;
-        text-align: left;
-      }
-      .item4 {
-        display: flex;
-        align-items: center;
-        grid-area: email;
-        text-align: left;
-      }
-      .item5 {
-        display: flex;
-        align-items: center;
-        grid-area: linkedn;
-        text-align: left;
-      }
-      .item-link {
-        margin-bottom: 5px;
-      }
-      .grid-container.name {
-        /* justify-content: center; */
-        display: grid;
-        grid-template-areas:
-          "name icon";
-      }
-      .grid-container.name > div {
-        text-align: center;
-      }
-      .grid-container.links {
-        /* justify-content: center; */
-        display: grid;
-        grid-template-areas:
-          "phone email github linkedn";
-      }
-      .grid-container.links > div {
-        text-align: center;
-      }
-      /* CSS for smaller viewports */
-      @media (max-width: 640px) {
-        .wrapper {
-          display: block;
-        }
-        .item4 {
-          justify-self: end;
-        }
-        .item5 {
-          justify-self: end;
-        }
-        .grid-container.name {
-          grid-template-areas:
-            "name"
-            "icon";
-        }
-        .grid-container.links {
-          grid-template-areas:
-            "phone email"
-            "github linkedn";
-        }
-      }
-    </style>
   </head>
 
   <body onresize="on_resize()">
@@ -140,7 +14,6 @@
             <div><img src="favicon.ico"/></div>
           </div>
         <div class="grid-container links">
-
           <div class="item2">
             <img
               src="github-icon.png"
@@ -209,7 +82,8 @@
         <button class="collapsible">• About Me</button>
         <div class="content">
           <p>
-            I am an undergraduate completing SFU's SFU-ZJU Computing Science Dual Degree Program. During my free time I like to code and play video games.
+            I am an undergraduate completing SFU's SFU-ZJU Computing Science Dual Degree Program. 
+            During my free time I like to code and play video games.
           </p>
         </div>
         <!-- <button class="collapsible">• Skills</button>
@@ -300,13 +174,33 @@
             <img src="resources/robot_arm_thumb.png" width="300"></center>
           </p>
         </div>
+        <center>
+        <a href="resources/robot_arm/index.html" onmouseover="change_col(this, 'lightblue')" onmouseout="change_col(this, 'blue')">
+        <div class="zoom">
+          <img class="previewimage"src="preview_fate.png">
+          <div class="previewtext">Booga's Welcome of Fate</div>
+      </div>
+      </a></center>
         <div>
           <a href="resources/resume.pdf" target="_blank">My Resume</a>
         </div>
 
+
+
+
       </div>
+
+
         <script src="collapse.js"></script>
-        <script>function on_resize() {
+        <script>
+
+          function change_col(x, color) {
+            let text = x.getElementsByClassName("previewtext")[0];
+            text.style.color = color;
+          }
+          
+
+          function on_resize() {
             for (var x of document.getElementsByClassName("collapsible")) {
               if (x.classList.contains("active")) {
                 var content = x.nextElementSibling;
