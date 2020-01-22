@@ -1,0 +1,32 @@
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  margin: auto;
+}
+
+.zoom {
+  transition: transform 0.2s;
+  text-align: center;
+  display: flex;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+}
+.zoom:hover {
+  transform: scale(1.2);
+}
+
+.previewtext {
+  position: absolute;
+  font-size: 40px;
+  color: white;
+}
+
+.previewimage {
+  max-width: 500px;
+  border-radius: 4%;
+}

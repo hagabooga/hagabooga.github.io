@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <title>Cameron Hu</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="itempreview.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div style="text-align: center;">
+      <div class="grid-container">
+        <div>
+          <a
+            href="resources/robot_arm/index.html"
+            onmouseover="change_col(this, 'white')"
+            onmouseout="change_col(this, 'white')"
+          >
+            <div class="zoom">
+              <img class="previewimage" src="preview_fate.png" />
+              <div class="previewtext">Booga's Welcome of Fate</div>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a
+            href="resources/robot_arm/index.html"
+            onmouseover="change_col(this, 'white')"
+            onmouseout="change_col(this, 'white')"
+          >
+            <div class="zoom">
+              <img class="previewimage" src="preview_fate.png" />
+              <div class="previewtext">Booga's Welcome of Fate</div>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a
+            href="resources/robot_arm/index.html"
+            onmouseover="change_col(this, 'white')"
+            onmouseout="change_col(this, 'white')"
+          >
+            <div class="zoom">
+              <img class="previewimage" src="preview_fate.png" />
+              <div class="previewtext">Booga's Welcome of Fate</div>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a
+            href="resources/robot_arm/index.html"
+            onmouseover="change_col(this, 'white')"
+            onmouseout="change_col(this, 'white')"
+          >
+            <div class="zoom">
+              <img class="previewimage" src="preview_fate.png" />
+              <div class="previewtext">Booga's Welcome of Fate</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <script src="collapse.js"></script>
+      <script src="itempreview.js"></script>
+      <script>
+        function on_resize() {
+          for (var x of document.getElementsByClassName("collapsible")) {
+            if (x.classList.contains("active")) {
+              var content = x.nextElementSibling;
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>

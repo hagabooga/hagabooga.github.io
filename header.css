@@ -98,7 +98,7 @@
   text-align: center;
 }
 /* CSS for smaller viewports */
-@media (max-width: 640px) {
+@media (max-width: 600px) {
   .wrapper {
     display: block;
   }
