@@ -21,21 +21,21 @@
 
 .previewtext {
   position: absolute;
-  font-size: 32px;
+  font-size: 64px;
   color: white;
 }
 
 .previewimage {
+  /* transition: opacity 0.2s; */
   border-radius: 4%;
   max-width: 100%;
   max-height: auto;
   height: auto;
 }
 
-.scale {
-  /* width: 20%; */
-  height: auto;
-}
+/* .previewimage:hover {
+  opacity: 0.1;
+} */
 
 @media (max-width: 850px) {
   .itempreview-container {
