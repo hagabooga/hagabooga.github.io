@@ -1,8 +1,27 @@
 <html>
-  <div>
-    <title>Cameron Hu</title>
-    <link rel="stylesheet" href="header.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cameron Hu</title>
+  <link rel="stylesheet" href="header.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <script src="itempreview.js"></script> -->
+  <script src="sidebar.js"></script>
+
+  <div class="actual-sidebar" id="mySidebar">
+    <div style="background-color:slategray;">
+      <button onclick="close_sidebar()" class="close-sidebar">
+        &times; Close
+      </button>
+    </div>
+    <a href="#projects-title" class="link-in-sidebar">Projects</a>
+  </div>
+
+  <div class="sidebar-block">
+    <button class="sidebar" onclick="open_sidebar()">
+      ☰
+    </button>
+  </div>
+
+  <div style="background-color: white; padding-top: 80px;">
+    <!-- HEADER -->
     <div style="text-align: center; margin-bottom: 30px;">
       <div class="wrapper">
         <div class="grid-container name">
@@ -50,18 +69,16 @@
       </div>
     </div>
     <div style="text-align: center; font-size: 48px; margin-bottom: 10px;">
-      <u>Projects</u>
+      <u id="projects-title" style="margin-top: -75px; padding-top: 75px;"
+        >Projects</u
+      >
     </div>
     <div style="text-align: center;">
       <link rel="stylesheet" href="itempreview.css" />
       <div class="itempreview-container">
         <!-- ITEMPREVIEW -->
         <div class="scale">
-          <a
-            href="welcome/fate.html"
-            onmouseover="change_col(this, 'white')"
-            onmouseout="change_col(this, 'white')"
-          >
+          <a href="welcome/fate.html">
             <div class="zoom">
               <img class="previewimage" src="preview_fate.png" />
             </div>
@@ -69,11 +86,7 @@
         </div>
         <!-- ITEMPREVIEW -->
         <div class="scale">
-          <a
-            href="clubhouse.html"
-            onmouseover="change_col(this, 'white')"
-            onmouseout="change_col(this, 'white')"
-          >
+          <a href="clubhouse.html">
             <div class="zoom">
               <img class="previewimage" src="preview_clubhouse.png" />
             </div>
@@ -81,11 +94,7 @@
         </div>
         <!-- ITEMPREVIEW -->
         <div class="scale">
-          <a
-            href="chillcalm.html"
-            onmouseover="change_col(this, 'white')"
-            onmouseout="change_col(this, 'white')"
-          >
+          <a href="chillcalm.html">
             <div class="zoom">
               <img class="previewimage" src="preview_chillcalm.png" />
             </div>
@@ -93,11 +102,7 @@
         </div>
         <!-- ITEMPREVIEW -->
         <div class="scale">
-          <a
-            href="charging\BCGameJam2019-wario.html"
-            onmouseover="change_col(this, 'white')"
-            onmouseout="change_col(this, 'white')"
-          >
+          <a href="charging\BCGameJam2019-wario.html">
             <div class="zoom">
               <img class="previewimage" src="preview_chargingup.png" />
             </div>
@@ -105,11 +110,7 @@
         </div>
         <!-- ITEMPREVIEW -->
         <div class="scale">
-          <a
-            href="resources/robot_arm/index.html"
-            onmouseover="change_col(this, 'white')"
-            onmouseout="change_col(this, 'white')"
-          >
+          <a href="resources/robot_arm/index.html">
             <div class="zoom">
               <img class="previewimage" src="preview_robotarm.png" />
             </div>
@@ -118,7 +119,6 @@
 
         <!-- ######## END OF ITEM PREVIEWS ##################### -->
       </div>
-      <script src="itempreview.js"></script>
     </div>
   </div>
 </html>

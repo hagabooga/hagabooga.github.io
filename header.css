@@ -6,10 +6,16 @@
   font-family: myFirstFont;
 }
 
+body {
+  margin: 0;
+  text-align: center;
+}
+
 .wrapper {
   display: inline-block;
   text-align: left;
 }
+
 .collapsible {
   background: none;
   color: black;
@@ -51,7 +57,7 @@
 }
 .item1 {
   grid-area: name;
-  font-size: 64px;
+  font-size: 72px;
   text-align: left;
 }
 .item2 {
@@ -117,5 +123,83 @@
     grid-template-areas:
       "phone email"
       "github linkedn";
+  }
+}
+
+.sidebar-block {
+  background-color: black;
+  position: fixed;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+  padding: none;
+}
+
+.sidebar {
+  font-family: inherit;
+  background-color: transparent;
+  border: none;
+  white-space: normal;
+  outline: 0;
+  float: center;
+  padding-left: 10px;
+  text-align: left;
+  width: auto;
+  display: block;
+  font-size: 48px;
+  color: white;
+  z-index: 9;
+}
+
+.close-sidebar {
+  font-family: inherit;
+  background-color: transparent;
+  border: none;
+  white-space: normal;
+  outline: 0;
+  float: center;
+  padding: 0s;
+  text-align: left;
+  font-size: 48px;
+  display: block;
+  color: white;
+  width: 100%;
+  z-index: 11;
+}
+
+.actual-sidebar {
+  width: 25%;
+  height: 100%;
+  font-family: inherit;
+  background-color: black;
+  display: none;
+  position: fixed;
+  z-index: 11;
+}
+
+.link-in-sidebar {
+  color: white;
+  font-size: 48px;
+  text-decoration: none;
+  padding-left: 5%;
+  width: 100%;
+  display: block;
+  text-align: left;
+}
+
+@media (max-width: 800px) {
+  .sidebar-block {
+    font-size: 28px;
+  }
+  .sidebar {
+    font-size: 28px;
+  }
+
+  .close-sidebar {
+    font-size: 28px;
+  }
+  .link-in-sidebar {
+    font-size: 28px;
   }
 }
