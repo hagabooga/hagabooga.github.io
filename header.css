@@ -147,7 +147,7 @@ body {
   text-align: left;
   width: auto;
   display: block;
-  font-size: 48px;
+  font-size: 32px;
   color: white;
   z-index: 9;
 }
@@ -161,7 +161,7 @@ body {
   float: center;
   padding: 0s;
   text-align: left;
-  font-size: 48px;
+  font-size: 32px;
   display: block;
   color: white;
   width: 100%;
@@ -169,7 +169,7 @@ body {
 }
 
 .actual-sidebar {
-  width: 25%;
+  width: auto;
   height: 100%;
   font-family: inherit;
   background-color: black;
@@ -180,7 +180,7 @@ body {
 
 .link-in-sidebar {
   color: white;
-  font-size: 48px;
+  font-size: 32px;
   text-decoration: none;
   padding-left: 5%;
   width: 100%;
