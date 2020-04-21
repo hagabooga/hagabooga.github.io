@@ -1,12 +1,13 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://segoeuil.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://medit2te.png" type="Texture" id=2]
+[ext_resource path="res://sprites/medit2te.png" type="Texture" id=2]
 [ext_resource path="res://FrontPage.gd" type="Script" id=3]
-[ext_resource path="res://phone-icon.png" type="Texture" id=4]
-[ext_resource path="res://github-icon.png" type="Texture" id=5]
-[ext_resource path="res://email-icon.png" type="Texture" id=6]
+[ext_resource path="res://sprites/phone-icon.png" type="Texture" id=4]
+[ext_resource path="res://sprites/github-icon.png" type="Texture" id=5]
+[ext_resource path="res://sprites/email-icon.png" type="Texture" id=6]
 [ext_resource path="res://linkedin-icon.png" type="Texture" id=7]
+
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 1, 1, 1 )

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://door/Door.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sprites/github-icon.png" type="Texture" id=2]
+
+[node name="GithubDoor" instance=ExtResource( 1 )]
+position = Vector2( -1.98608, -0.397217 )
+link = "https://github.com/hagabooga/"
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( 2.15416, -311.733 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
