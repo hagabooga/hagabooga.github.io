@@ -43,7 +43,7 @@
 [ext_resource path="res://sprites/door/DOOR_34.png" type="Texture" id=42]
 [ext_resource path="res://door/Door.gd" type="Script" id=43]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=4]
 radius = 91.5872
 height = 168.054
 
@@ -56,7 +56,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 526.562, 667.421 )
+extents = Vector2( 587.837, 392.893 )
 
 [node name="Door" type="Area2D"]
 scale = Vector2( 0.4, 0.4 )
@@ -64,10 +64,9 @@ script = ExtResource( 43 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 2.25624, -263.982 )
-scale = Vector2( 1, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+shape = SubResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -22.0529, -35.2845 )
@@ -76,7 +75,7 @@ frames = SubResource( 2 )
 [node name="WalkIn" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WalkIn"]
-position = Vector2( -439.365, -463.415 )
+position = Vector2( 6.99921, -81.1982 )
 shape = SubResource( 3 )
 
 [node name="Timer" type="Timer" parent="."]

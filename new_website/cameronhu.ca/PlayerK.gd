@@ -12,7 +12,7 @@ func _ready():
 	Engine.set_target_fps(Engine.get_iterations_per_second())
 
 var friction = 0.1
-var acceleration = 0.1
+var acceleration = 0.08
 
 func get_input():
 	var input_dir = 0
