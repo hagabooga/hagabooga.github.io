@@ -169,7 +169,7 @@ region_rect = Rect2( 0, 0, 128, 32 )
 position = Vector2( -1723.26, 353.567 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 2 )
-frame = 5
+frame = 4
 playing = true
 
 [node name="Sprite2" type="AnimatedSprite" parent="Instructions"]
@@ -190,7 +190,7 @@ frame = 31
 position = Vector2( -1530.95, 212.646 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 4 )
-frame = 4
+frame = 3
 playing = true
 
 [node name="Node2D" type="Node2D" parent="Instructions"]
