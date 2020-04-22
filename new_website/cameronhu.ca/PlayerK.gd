@@ -9,6 +9,7 @@ var velocity = Vector2.ZERO
 
 
 func _ready():
+	Engine.set_iterations_per_second(150)
 	Engine.set_target_fps(Engine.get_iterations_per_second())
 
 var friction = 0.1
