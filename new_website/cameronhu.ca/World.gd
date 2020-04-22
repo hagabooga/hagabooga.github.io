@@ -5,6 +5,7 @@ var time = 0
 
 
 func _ready():
+	$Instructions/Label5.text = OS.get_model_name()
 	if OS.get_model_name() != "GenericDevice":
 		$Instructions/Label6.text += OS.get_model_name()
 		$Instructions/Label6.visible = true
