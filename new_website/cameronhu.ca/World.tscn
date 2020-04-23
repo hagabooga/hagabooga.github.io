@@ -175,7 +175,6 @@ playing = true
 position = Vector2( -1334.37, 351.046 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 
 [node name="End Portal Open" type="Sprite" parent="Instructions"]
@@ -190,7 +189,7 @@ frame = 31
 position = Vector2( -1530.95, 212.646 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 4 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="Node2D" type="Node2D" parent="Instructions"]
