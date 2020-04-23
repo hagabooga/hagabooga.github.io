@@ -105,9 +105,9 @@ __meta__ = {
 }
 
 [node name="Label4" type="Label" parent="Instructions"]
-margin_left = -1012.45
+margin_left = -990.785
 margin_top = 381.413
-margin_right = -650.445
+margin_right = -628.785
 margin_bottom = 446.413
 custom_fonts/font = SubResource( 1 )
 text = "Up to enter a portal!"
@@ -169,13 +169,13 @@ region_rect = Rect2( 0, 0, 128, 32 )
 position = Vector2( -1723.26, 353.567 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 2 )
-frame = 1
 playing = true
 
 [node name="Sprite2" type="AnimatedSprite" parent="Instructions"]
 position = Vector2( -1334.37, 351.046 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="End Portal Open" type="Sprite" parent="Instructions"]
@@ -190,7 +190,7 @@ frame = 31
 position = Vector2( -1530.95, 212.646 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 4 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="Node2D" type="Node2D" parent="Instructions"]
@@ -238,6 +238,28 @@ custom_fonts/font = ExtResource( 35 )
 text = "Don't want to play?
 Click here to open 
 my basic website."
+align = 1
+valign = 1
+
+[node name="Button2" type="Button" parent="Instructions"]
+margin_left = -1983.98
+margin_top = 65.7247
+margin_right = -1843.98
+margin_bottom = 191.725
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Instructions/Button2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.926758
+margin_right = 0.926758
+custom_fonts/font = ExtResource( 35 )
+text = "On Mobile?
+Click here
+for controls"
 align = 1
 valign = 1
 
@@ -406,6 +428,7 @@ Select 1 of 3 unique classes
 and start your adventure!"
 [connection signal="animation_finished" from="Instructions/Sprite3" to="." method="_on_Sprite3_animation_finished"]
 [connection signal="pressed" from="Instructions/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Instructions/Button2" to="." method="_on_Button2_pressed"]
 
 [editable path="Doors/LinkedinDoor"]
 

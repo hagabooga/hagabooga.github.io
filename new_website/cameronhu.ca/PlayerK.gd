@@ -11,6 +11,11 @@ var velocity = Vector2.ZERO
 func _ready():
 	Engine.set_iterations_per_second(150)
 	Engine.set_target_fps(Engine.get_iterations_per_second())
+	toggle_mobile_controls()
+
+func toggle_mobile_controls():
+	for x in $MobileControls.get_children():
+		x.visible = !x.visible
 
 var friction = 0.1
 var acceleration = 0.08
@@ -71,3 +76,45 @@ func _on_Sprite_frame_changed():
 	else:
 		$HitboxRight/CollisionShape2D.disabled = true
 		$HitboxLeft/CollisionShape2D.disabled = true
+
+
+
+func _on_TouchScreenButton_pressed():
+	Input.action_press("ui_left")
+
+
+func _on_TouchScreenButton_released():
+	Input.action_release("ui_left")
+
+
+func _on_TouchScreenButton2_pressed():
+	Input.action_press("ui_right")
+
+
+func _on_TouchScreenButton2_released():
+	Input.action_release("ui_right")
+
+
+func _on_TouchScreenButton3_pressed():
+	Input.action_press("ui_select")
+
+
+func _on_TouchScreenButton3_released():
+	Input.action_release("ui_select")
+
+
+func _on_TouchScreenButton4_pressed():
+	Input.action_press("left_ctrl")
+
+
+func _on_TouchScreenButton4_released():
+	Input.action_release("left_ctrl")
+
+
+func _on_TouchScreenButton5_pressed():
+	Input.action_press("ui_up")
+
+
+
+func _on_TouchScreenButton5_released():
+	Input.action_release("ui_up")
