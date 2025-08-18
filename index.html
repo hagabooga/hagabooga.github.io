@@ -1,97 +1,348 @@
-<html>
-	<title>Cameron Hu</title>
-	<link rel="stylesheet" href="header.css" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!-- <script src="itempreview.js"></script> -->
-	<!-- <script src="sidebar.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cameron Hu - Portfolio</title>
+		<link rel="stylesheet" href="header.css" />
+		<link rel="stylesheet" href="itempreview.css" />
+		<style>
+			/* Modern CSS Reset and Base Styles */
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
 
-	<div class="actual-sidebar" id="mySidebar">
-		<div style="background-color:slategray;">
-			<button onclick="close_sidebar()" class="close-sidebar">
-				&times; Close
-			</button>
-		</div>
-		<a href="#projects-title" class="link-in-sidebar">Projects</a>
-	</div>
+			:root {
+				--primary-color: #2563eb;
+				--secondary-color: #1e40af;
+				--accent-color: #3b82f6;
+				--text-color: #1f2937;
+				--text-light: #6b7280;
+				--bg-color: #ffffff;
+				--bg-light: #f8fafc;
+				--border-color: #e5e7eb;
+				--shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+					0 2px 4px -1px rgba(0, 0, 0, 0.06);
+				--shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+					0 4px 6px -2px rgba(0, 0, 0, 0.05);
+			}
 
-	<div class="sidebar-block">
-		<button class="sidebar" onclick="open_sidebar()">
-			☰
-		</button>
-	</div> -->
+			body {
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+				line-height: 1.6;
+				color: var(--text-color);
+				background: linear-gradient(135deg, var(--bg-light) 0%, #e0f2fe 100%);
+				min-height: 100vh;
+			}
 
-	<div style="background-color: #f5feff; padding-top: 10px">
-		<!-- HEADER -->
-		<div style="text-align: center; margin-bottom: 30px">
-			<div class="wrapper">
-				<div class="grid-container name">
-					<div class="item1">Cameron Hu</div>
-					<div><img src="favicon.ico" /></div>
-				</div>
-				<div class="grid-container links">
-					<div class="item2">
-						<img src="github-icon.png" width="20" height="20" hspace="7" />
-						<span class="item-link">
+			.container {
+				max-width: 1200px;
+				margin: 0 auto;
+				padding: 0 20px;
+			}
+
+			/* Header Styles */
+			.header {
+				background: var(--bg-color);
+				padding: 40px 0;
+				margin-bottom: 60px;
+				box-shadow: var(--shadow);
+				position: relative;
+				overflow: hidden;
+			}
+
+			.header::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: linear-gradient(
+					45deg,
+					rgba(37, 99, 235, 0.05) 0%,
+					rgba(59, 130, 246, 0.05) 100%
+				);
+			}
+
+			.header-content {
+				position: relative;
+				z-index: 2;
+			}
+
+			.name-section {
+				text-align: center;
+				margin-bottom: 30px;
+			}
+
+			.name-container {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 15px;
+				margin-bottom: 10px;
+			}
+
+			.name {
+				font-size: clamp(2.5rem, 5vw, 4rem);
+				font-weight: 700;
+				background: linear-gradient(
+					135deg,
+					var(--primary-color),
+					var(--accent-color)
+				);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+			}
+
+			.name-icon {
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+				box-shadow: var(--shadow);
+			}
+
+			.contact-grid {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				gap: 20px;
+				justify-items: stretch;
+				max-width: 1000px;
+				margin: 0 auto;
+				padding: 0 20px;
+			}
+
+			.contact-item {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 8px;
+				padding: 10px 16px;
+				background: var(--bg-color);
+				border-radius: 12px;
+				box-shadow: var(--shadow);
+				transition: all 0.3s ease;
+				text-decoration: none;
+				color: var(--text-color);
+				border: 2px solid transparent;
+				min-width: 0;
+				white-space: nowrap;
+				width: 100%;
+			}
+
+			.contact-item:hover {
+				transform: translateY(-2px);
+				box-shadow: var(--shadow-lg);
+				border-color: var(--primary-color);
+			}
+
+			.contact-icon {
+				width: 24px;
+				height: 24px;
+				flex-shrink: 0;
+			}
+
+			.contact-text {
+				font-size: 16px;
+				font-weight: 500;
+			}
+
+			/* Projects Section */
+			.projects-section {
+				text-align: center;
+				padding-bottom: 60px;
+			}
+
+			.projects-title {
+				font-size: clamp(2.5rem, 4vw, 3.5rem);
+				font-weight: 700;
+				margin-bottom: 50px;
+				color: var(--text-color);
+				position: relative;
+				display: inline-block;
+			}
+
+			.projects-title::after {
+				content: "";
+				position: absolute;
+				bottom: -10px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 80px;
+				height: 4px;
+				background: linear-gradient(
+					90deg,
+					var(--primary-color),
+					var(--accent-color)
+				);
+				border-radius: 2px;
+			}
+
+			/* Enhanced Project Grid */
+			.projects-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 30px;
+				max-width: 1000px;
+				margin: 0 auto;
+			}
+
+			.project-card {
+				background: transparent;
+				border-radius: 16px;
+				box-shadow: var(--shadow);
+				overflow: hidden;
+				transition: all 0.3s ease;
+				border: 2px solid transparent;
+				display: block;
+				position: relative;
+			}
+
+			.project-card:hover {
+				transform: translateY(-8px);
+				box-shadow: var(--shadow-lg);
+				border-color: var(--primary-color);
+			}
+
+			.project-image {
+				width: 100%;
+				height: 200px;
+				object-fit: cover;
+				transition: transform 0.3s ease;
+				border-radius: 16px;
+				display: block;
+			}
+
+			.project-card:hover .project-image {
+				transform: scale(1.05);
+			}
+
+			.project-title {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				color: white;
+				font-size: 2rem;
+				font-weight: bold;
+				text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+				text-align: center;
+				z-index: 2;
+				pointer-events: none;
+			}
+
+			/* Responsive Design */
+			@media (max-width: 768px) {
+				.header {
+					padding: 30px 0;
+					margin-bottom: 40px;
+				}
+
+				.contact-grid {
+					grid-template-columns: repeat(2, 1fr);
+					gap: 12px;
+				}
+
+				.contact-item {
+					padding: 8px 12px;
+					gap: 6px;
+				}
+
+				.contact-text {
+					font-size: 14px;
+				}
+
+				.projects-grid {
+					grid-template-columns: 1fr;
+					gap: 20px;
+				}
+
+				.name-container {
+					flex-direction: column;
+					gap: 10px;
+				}
+			}
+
+			@media (max-width: 480px) {
+				.contact-grid {
+					grid-template-columns: 1fr;
+					gap: 10px;
+				}
+			}
+
+			/* Accessibility */
+			@media (prefers-reduced-motion: reduce) {
+				* {
+					animation-duration: 0.01ms !important;
+					animation-iteration-count: 1 !important;
+					transition-duration: 0.01ms !important;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<!-- Header Section -->
+			<header class="header">
+				<div class="header-content">
+					<div class="name-section">
+						<div class="name-container">
+							<h1 class="name">Cameron Hu</h1>
+							<img src="favicon.ico" alt="Cameron Hu" class="name-icon" />
+						</div>
+
+						<div class="contact-grid">
+							<a href="mailto:cameron.k.hu@gmail.com" class="contact-item">
+								<img src="email-icon.png" alt="Email" class="contact-icon" />
+								<span class="contact-text">cameron.k.hu@gmail.com</span>
+							</a>
+
+							<a href="tel:+7788557829" class="contact-item">
+								<img src="phone-icon.png" alt="Phone" class="contact-icon" />
+								<span class="contact-text">778-855-7829</span>
+							</a>
+
 							<a
-								style="font-size: 20"
 								href="https://github.com/hagabooga"
 								target="_blank"
+								class="contact-item"
 							>
-								hagabooga
+								<img src="github-icon.png" alt="GitHub" class="contact-icon" />
+								<span class="contact-text">hagabooga</span>
 							</a>
-						</span>
-					</div>
-					<div class="item3">
-						<img src="phone-icon.png" width="20" height="20" hspace="7" />
-						<span class="item-link">
-							<a style="font-size: 20" href="tel:+7788557829">7788557829</a>
-						</span>
-					</div>
-					<div class="item4">
-						<img src="email-icon.png" width="20" height="20" hspace="7" />
-						<span class="item-link">
-							<a style="font-size: 20" href="mailto:ckhu@sfu.ca">ckhu@sfu.ca</a>
-						</span>
-					</div>
-					<div class="item5">
-						<img src="linkedin-icon.png" width="20" height="20" hspace="7" />
-						<span class="item-link">
+
 							<a
-								style="font-size: 20"
 								href="https://www.linkedin.com/in/cameron-hu-253944171/"
 								target="_blank"
+								class="contact-item"
 							>
-								Cameron Hu
+								<img
+									src="linkedin-icon.png"
+									alt="LinkedIn"
+									class="contact-icon"
+								/>
+								<span class="contact-text">Cameron Hu</span>
 							</a>
-						</span>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div style="text-align: center; font-size: 48px; margin-bottom: 10px">
-			<u id="projects-title" style="margin-top: -60px; padding-top: 60px"
-				>Projects</u
-			>
-		</div>
-		<div style="text-align: center">
-			<link rel="stylesheet" href="itempreview.css" />
-			<div class="itempreview-container">
-				<!-- ITEMPREVIEW -->
-				<div class="scale">
-					<a href="welcome/fate.html">
-						<div class="zoom">
-							<img class="previewimage" src="preview_fate.png" />
-						</div>
+			</header>
+
+			<!-- Projects Section -->
+			<main class="projects-section">
+				<h2 id="projects-title" class="projects-title">Projects</h2>
+
+				<div class="projects-grid">
+					<a href="welcome/fate.html" class="project-card">
+						<img
+							src="preview_fate.png"
+							alt="Fate Project"
+							class="project-image"
+						/>
 					</a>
-<<<<<<< Updated upstream
-				</div>        
-				<!-- ITEMPREVIEW -->
-				<div class="scale">
-					<a href="twozerofoureight\index.html">
-						<div class="zoom">
-							<img class="previewimage" src="preview_2048.png" />
-						</div>
-=======
 
 					<a
 						href="https://hagabooga.itch.io/lens"
@@ -150,53 +401,9 @@
 							class="project-image"
 						/>
 						<div class="project-title">SIMRAN STYLE</div>
->>>>>>> Stashed changes
 					</a>
 				</div>
-				<!-- ITEMPREVIEW -->
-				<div class="scale">
-					<a href="boogabird/index.html">
-						<div class="zoom">
-							<img class="previewimage" src="preview_bird.jpg" />
-						</div>
-					</a>
-				</div>
-				<!-- ITEMPREVIEW -->
-				<div class="scale">
-					<a href="charging\BCGameJam2019-wario.html">
-						<div class="zoom">
-							<img class="previewimage" src="preview_chargingup.png" />
-						</div>
-					</a>
-				</div>
-				<!-- ITEMPREVIEW -->
-				<div class="scale">
-					<a href="resources/robot_arm/index.html">
-						<div class="zoom">
-							<img class="previewimage" src="preview_robotarm.png" />
-						</div>
-					</a>
-				</div>
-				<!-- ITEMPREVIEW -->
-				<!-- <div class="scale">
-					<a href="clubhouse.html">
-						<div class="zoom">
-							<img class="previewimage" src="preview_clubhouse.png" />
-						</div>
-					</a>
-				</div> -->
-				<!-- ITEMPREVIEW -->
-				<div class="scale">
-					<a href="chillcalm.html">
-						<div class="zoom">
-								<img class="previewimage" src="preview_chillcalm.png" />
-					</div>
-					</a>
-				</div>
-
-
-				<!-- ######## END OF ITEM PREVIEWS ##################### -->
-			</div>
+			</main>
 		</div>
-	</div>
+	</body>
 </html>
